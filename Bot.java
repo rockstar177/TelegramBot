@@ -43,7 +43,6 @@ public class Bot extends TelegramLongPollingBot
 		KeyboardRow keyboardFirstRow = new KeyboardRow();
 		keyboardFirstRow.add(new KeyboardButton("/Help"));
 		keyboardFirstRow.add(new KeyboardButton("/Settings"));
-		//keyboardFirstRow.add(new KeyboardButton("/Weather"));
 		keyboardRowList.add(keyboardFirstRow);
 		replyKeyboard.setKeyboard(keyboardRowList);
 	}
@@ -85,7 +84,7 @@ public class Bot extends TelegramLongPollingBot
 				case "/Settings":
 					sendMsg(message, "What are we going to customize?");
 					break;
-				default: //"/Weather":
+				default: 
 					try
 					{
 						sendMsg(message,Weather.getWeather(message.getText(), model));
@@ -95,7 +94,6 @@ public class Bot extends TelegramLongPollingBot
 						sendMsg(message,"City is not found!");
 					}
 					break;
-				//default:
 			}
 		}
 	}
