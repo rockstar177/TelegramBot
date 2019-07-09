@@ -40,17 +40,17 @@ public class Weather
 		model.setWind(wind.getDouble("speed"));
 		JSONObject sys = object.getJSONObject("sys");
 		model.setCountry((String)sys.get("country"));
-		               return "City: "+ model.getName() 				           + "\n" +
-				      "Country: " + model.getCountry() 					   + "\n" +
-				      "Minimal temperature: " + model.getTemp_min() + "C"  		   + "\n" +
-				      "Temperature: " + model.getTemp() 	    + "C"  		   + "\n" +
-				      "Maximal temperature: " + model.getTemp_max() + "C"  		   + "\n" +
-				      "Speed of wind: " + model.getWind()  				   + "\n" +
-				      "Humidity: " + model.getHumidity()   	    + "%"      	           + "\n" +
-				      "Pressure: " + model.getPressure()   				   + "\n" +
-				      "Weather: "  + model.getMain()                       		   + "\n" +
-				      "Description: " + model.getWeather() 	 			   + "\n" +
-				      "http://openweathermap.org/img/wn/" + model.getIcon() + ".png";
+		return "City: "+ model.getName() 				           		+ "\n" +
+		       "Country: " + model.getCountry() 					    + "\n" +
+		       "Minimal temperature: " + model.getTemp_min() + "C"  	+ "\n" +
+		       "Temperature: " + model.getTemp() 	   		 + "C"	    + "\n" +
+		       "Maximal temperature: " + model.getTemp_max() + "C"  	+ "\n" +
+		       "Speed of wind: " + model.getWind()  				    + "\n" +
+		       "Humidity: " + model.getHumidity()   	     + "%"     	+ "\n" +
+			   "Pressure: " + model.getPressure()   				    + "\n" +
+			   "Weather: "  + model.getMain()                       	+ "\n" +
+			   "Description: " + model.getWeather() 	 			    + "\n" +
+			   "http://openweathermap.org/img/wn/" + model.getIcon() + ".png";
 	}
 }
 
